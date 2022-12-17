@@ -269,10 +269,17 @@
                 </a>
 
                 <!-- item-->
-                <a href="javascript:void(0);" class="dropdown-item notify-item">
-                    <i class="mdi mdi-logout me-1"></i>
-                    <span>Logout</span>
-                </a>
+                <!--Start Log Out-->
+                <form action="{{route('logout')}}" method="post">
+                    @csrf
+                    <button type="submit" class="dropdown-item notify-item">
+                        <i class="mdi mdi-logout me-1"></i>
+                        <span>Logout</span>
+                    </button>
+
+                </form>
+
+                <!--Start Log Out-->
             </div>
         </li>
 

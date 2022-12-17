@@ -62,7 +62,9 @@ class CourseCategoryController extends Controller
      */
     public function edit($id)
     {
-        //
+        return view('admin.courseCategory.edit',[
+            'courseCategory'=>CourseCategory::find($id)
+        ]);
     }
 
     /**
@@ -74,7 +76,8 @@ class CourseCategoryController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        CourseCategory::updateOrcreateCourseCategory($request,$id);
+        return redirect()->route('course-categories.index')->with('success','Course Category Updated Successfully');
     }
 
     /**
@@ -85,6 +88,7 @@ class CourseCategoryController extends Controller
      */
     public function destroy($id)
     {
-        return CourseCategory::find($id)->delete();
+        CourseCategory::find($id)->delete();
+        return  redirect()->back()->with('success','Course Category Deleted Successfully');
     }
 }

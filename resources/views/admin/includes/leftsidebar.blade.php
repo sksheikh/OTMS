@@ -30,7 +30,6 @@
             <li class="side-nav-item">
                 <a data-bs-toggle="collapse" href="{{route('dashboard')}}" aria-expanded="false" aria-controls="sidebarDashboards" class="side-nav-link">
                     <i class="uil-home-alt"></i>
-                    <span class="badge bg-success float-end">4</span>
                     <span> Dashboards </span>
                 </a>
 

@@ -39,10 +39,15 @@
                         <tr>
                             <td>{{$loop->iteration}}</td>
                             <td>{{$courseCategory->name}}</td>
-                            <td>{{$courseCategory->status}}</td>
+                            <td>{{$courseCategory->status == 1 ? 'Published' : 'Unpublished'}}</td>
                             <td>
-                                <a href="" class="btn btn-sm btn-dark">Edit</a>
-                                <a href="{{route('course-categories.destroy',$courseCategory->id)}}" class="btn btn-sm btn-danger">Delete</a>
+                                <a href="{{route('course-categories.edit',$courseCategory->id)}}" class="btn btn-sm btn-dark">Edit</a>
+                                <form action="{{route('course-categories.destroy',$courseCategory->id)}}" method="post" class="d-inline-block" onsubmit="return confirm('Are you sure to delete this??')">
+                                    @csrf
+                                    @method('delete')
+                                    <button type="submit"  class="btn btn-sm btn-danger" >Delete</button>
+                                </form>
+
                             </td>
                         </tr>
                         @endforeach
