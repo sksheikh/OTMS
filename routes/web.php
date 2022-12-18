@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Front\FrontController;
 use App\Http\Controllers\Admin\DashboardController;
 use App\Http\Controllers\Admin\CourseCategoryController;
+use App\Http\Controllers\Admin\CourseSubCategoryController;
 
 
 Route::as('front.')->group(function (){
@@ -19,4 +20,5 @@ Route::middleware([
 
 //    Course Category routes
     Route::resource('course-categories',CourseCategoryController::class);
+    Route::resource('course-sub-categories',CourseSubCategoryController::class);
 });
