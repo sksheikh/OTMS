@@ -22,6 +22,10 @@
 <script src="{{asset('/')}}admin/assets/js/pages/demo.dashboard.js"></script>
 <!-- end demo js-->
 
+<!--Start Ck Editor-->
+<script src="https://cdn.ckeditor.com/4.20.1/standard/ckeditor.js"></script>
+<!--End Ck Editor-->
+
 <!--Toaster Js-->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/toastr.min.js" integrity="sha512-VEd+nq25CkR676O+pLBnDW09R7VQX9Mdiij052gVCp5yVH3jGtH70Ho/UUv4mJDsEdTvqRCFZg0NKGiojGnUCw==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 

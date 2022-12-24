@@ -152,6 +152,13 @@
 <!-- Start JS Here -->
 @include('admin.includes.scripts')
 <!-- End JS Here -->
+
+<!-- Start Custom JS Here -->
+@include('admin.includes.custom_scripts')
+<!-- End Custom JS Here -->
+
+@yield('script')
+
 </body>
 
 <!-- Mirrored from coderthemes.com/hyper/saas/index.html by HTTrack Website Copier/3.x [XR&CO'2014], Sun, 29 May 2022 14:57:36 GMT -->
